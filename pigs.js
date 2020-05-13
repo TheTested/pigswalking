@@ -47,6 +47,7 @@ DO(8, () => {
     steer: 0,
   });
 });
+sprites.sort(function(a, b){return b.scale-a.scale});
 
 function drawImage(image, spr) {
   ctx.setTransform(spr.scale, 0, 0, spr.scale, spr.xPosition.x, spr.xPosition.y); // sets scales and origin
@@ -63,7 +64,7 @@ function update() {
   if (text) {
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
-    ctx.drawImage(click, textX, textY, click.width/10, click. height/10);
+    ctx.drawImage(click, textX, textY, click.width/6, click. height/6);
   }
   if (image.complete) {
     var iw = image.width;

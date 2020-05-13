@@ -25,7 +25,7 @@ var followMouse = true;
 document.body.appendChild(canvas);
 var clicked = false;
 var resting = false;
-var maxscale = 0.5;
+var maxscale = 0.35;
 var clickedPos = new Victor(0, 0);
 var text = true;
 var w, h;

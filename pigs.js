@@ -121,7 +121,7 @@ function update() {
         } else {
           spr.velocity = new Victor(spr.velocity.x+rand(-0.05,0.05), spr.velocity.y+rand(-0.05,0.05));
           if (spr.scale < maxscale) {
-           spr.scale = spr.scale +0.002; 
+           spr.scale = spr.scale +0.0002; 
           }
         }
         spr.r = spr.velocity.horizontalAngle() + Math.PI / 2;

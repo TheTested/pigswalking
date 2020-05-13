@@ -1,8 +1,19 @@
-
 var image = new Image;
 image.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebb9b5db2b44c5b95a32f87_pig.png";
 var feed = new Image;
-feed.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ea2d08d0047df0ec71b771c_feed.png";
+feed.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaa67da7f595aeba23cf6_feed1.png";
+var feed1 = new Image;
+feed1.src = feed.src;
+var feed2 = new Image;
+feed2.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaa807a81157ae8e5f79f_feed2.png";
+var feed3 = new Image;
+feed3.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaad08842d1a34f17a9dc_feed3.png";
+var feed4 = new Image;
+feed4.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaae3febdba9ed4ba43d8_feed4.png";
+var feed5 = new Image;
+feed5.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaaf962fbe443906188c1_feed5.png";
+var feed6 = new Image;
+feed6.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbab44e21dfd0039ac8dca_feed6.png";
 var click = new Image;
 click.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebb9b09fe19316975045ff7_click2feed.png";
 var canvas = document.getElementById("canvas");
@@ -170,11 +181,27 @@ function update() {
         spr.dy = - 2 * spr.dy
       }
       setTimeout(function () {
+          feed = feed2;
+        setTimeout(function () {
+          feed = feed3;
+          setTimeout(function () {
+          feed = feed4;
+            setTimeout(function () {
+          feed = feed5;
+              setTimeout(function () {
+          feed = feed6;
+        }, 1000/6);
+        }, 1000/6);
+        }, 1000/6);
+        }, 1000/6);
+        }, 1000/6);
+      setTimeout(function () {
         text = true
         setTimeout(function () {
           followMouse = true;
         }, 3000);
-        newClickPosition()
+        newClickPosition();
+        feed = feed1;
       }, 1000);
     }, 1000);
   }

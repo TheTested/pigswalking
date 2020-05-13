@@ -25,6 +25,7 @@ var followMouse = true;
 document.body.appendChild(canvas);
 var clicked = false;
 var resting = false;
+var maxscale = 0.5;
 var clickedPos = new Victor(0, 0);
 var text = true;
 var w, h;
@@ -118,7 +119,10 @@ function update() {
           spr.velocity.add(spr.acceleration)
           spr.position.add(spr.velocity)
         } else {
-          spr.velocity = new Victor(spr.velocity.x+rand(-0.05,0.05), spr.velocity.y+rand(-0.05,0.05))
+          spr.velocity = new Victor(spr.velocity.x+rand(-0.05,0.05), spr.velocity.y+rand(-0.05,0.05));
+          if (spr.scale < maxscale) {
+           spr.scale = spr.scale +0.002; 
+          }
         }
         spr.r = spr.velocity.horizontalAngle() + Math.PI / 2;
         iwM = iw * spr.scale * 2 + w;

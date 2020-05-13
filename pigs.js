@@ -64,7 +64,7 @@ sprites.sort(function(a, b){return a.scale-b.scale});
 function drawImage(image, spr) {
   ctx.setTransform(spr.scale, 0, 0, spr.scale, spr.xPosition.x, spr.xPosition.y); // sets scales and origin
   ctx.rotate(spr.r);
-  ctx.drawImage(image, -image.width*spr.scale / 2, -image.height*spr.scale / 2);
+  ctx.drawImage(image, -image.width / 2, -image.height / 2);
 }
 
 
@@ -88,7 +88,7 @@ function update() {
       for (var i = 0; i < sprites.length; i++) {
         var spr = sprites[i];
         var desired = clickedPos.clone().subtract(spr.xPosition);
-        if (clickedPos.clone().subtract(spr.xPosition).length() > 100) {
+        if (clickedPos.clone().subtract(spr.xPosition).length() > 100 && spr.move) {
           
           // Set the length of the vector to 6.
           if (!desired.isZero()) {

@@ -63,7 +63,7 @@ function update() {
   if (text) {
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
-    ctx.drawImage(click, textX, textY);
+    ctx.drawImage(click, textX, textY, click.width/10, click. height/10);
   }
   if (image.complete) {
     var iw = image.width;
@@ -312,3 +312,6 @@ function newClickPosition() {
   }
   
 }
+
+
+

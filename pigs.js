@@ -83,7 +83,7 @@ function update() {
     var i = 0
 
     if (clicked) {
-      ctx.drawImage(feed, clickedPos.x, clickedPos.y, click.width/6, click.height/6);
+      ctx.drawImage(feed, clickedPos.x-click.width/12, clickedPos.y-click.height/12, click.width/6, click.height/6);
       for (var i = 0; i < sprites.length; i++) {
         var spr = sprites[i];
         var desired = clickedPos.clone().subtract(spr.xPosition);

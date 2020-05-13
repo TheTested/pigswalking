@@ -170,17 +170,6 @@ function update() {
   if (sprites.every(function (x) { return x.move != true; }) && !resting) {
     resting = true
     setTimeout(function () {
-      clicked = false
-      resting = false
-      clickedPos = new Victor(0, 0)
-      for (var i = 0; i < sprites.length; i++) {
-        var spr = sprites[i];
-        spr.velocity.normalize().multiplyScalar(1.3)
-        spr.move = true
-        spr.dx = -2 * spr.dx
-        spr.dy = - 2 * spr.dy
-      }
-      setTimeout(function () {
           feed = feed2;
         setTimeout(function () {
           feed = feed3;
@@ -195,6 +184,18 @@ function update() {
         }, 1000/6);
         }, 1000/6);
         }, 1000/6);
+    setTimeout(function () {
+      clicked = false
+      resting = false
+      clickedPos = new Victor(0, 0)
+      for (var i = 0; i < sprites.length; i++) {
+        var spr = sprites[i];
+        spr.velocity.normalize().multiplyScalar(1.3)
+        spr.move = true
+        spr.dx = -2 * spr.dx
+        spr.dy = - 2 * spr.dy
+      }
+      
       setTimeout(function () {
         text = true
         setTimeout(function () {

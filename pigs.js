@@ -47,7 +47,7 @@ DO(8, () => {
     steer: 0,
   });
 });
-sprites.sort(function(a, b){return b.scale-a.scale});
+sprites.sort(function(a, b){return a.scale-b.scale});
 
 function drawImage(image, spr) {
   ctx.setTransform(spr.scale, 0, 0, spr.scale, spr.xPosition.x, spr.xPosition.y); // sets scales and origin

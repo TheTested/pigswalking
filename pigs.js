@@ -1,8 +1,10 @@
 
 var image = new Image;
-image.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ea2d07d0047df54111b768b_pig.png";
+image.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebb9b5db2b44c5b95a32f87_pig.png";
 var feed = new Image;
 feed.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ea2d08d0047df0ec71b771c_feed.png";
+var click = new Image;
+click.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebb9b09fe19316975045ff7_click2feed.png";
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 canvas.style.position = "absolute";
@@ -61,7 +63,7 @@ function update() {
   if (text) {
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
-    ctx.fillText("Click Here", textX, textY);
+    ctx.drawImage(click, textX, textY);
   }
   if (image.complete) {
     var iw = image.width;
@@ -310,6 +312,3 @@ function newClickPosition() {
   }
   
 }
-
-
-

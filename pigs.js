@@ -26,10 +26,10 @@ document.body.appendChild(canvas);
 var clicked = false;
 var resting = false;
 var maxscale = 0.35;
-var clickedPos = new Victor(0, 0);
+var clickedPos = new Victor(10000, 10000);
 var text = true;
 var w, h;
-var mouse = new Victor(0, 0);
+var mouse = new Victor(10000, 10000);
 function resize() {
   w = canvas.width = innerWidth;
   h = canvas.height = innerHeight;

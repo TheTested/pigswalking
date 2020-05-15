@@ -330,11 +330,18 @@ function steer(current, desired) {
 }
 
 function newClickPosition() {
+  if(w > 992) {
   nextX=rand(250, w-120)
   nextY=rand(40, h-40)
+  var radius = 450
+  } else {
+    nextX=rand(20, w-20)
+    nextY=rand(20, h-40)
+    var radius = 200
+  }
   var el = document.getElementById("textmain");
   var rect = el.getBoundingClientRect();
-  if (distance(nextX, nextY, textX, textY) < 450) {
+  if (distance(nextX, nextY, textX, textY) < radius) {
     newClickPosition()
   } else if ((nextY>rect.top && nextY<rect.bottom) || (nextX>rect.left && nextX<rect.right)) {
     newClickPosition()

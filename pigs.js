@@ -233,9 +233,12 @@ document.addEventListener("mousedown", function (e) {
     getMousePosition(e);
   }
 });
+
+if (w > 992) {
 document.addEventListener("mousemove", function (e) {
   mouse = new Victor(e.clientX, e.clientY)
 });
+}
 function limitForce(vector) {
   var maxForce = 0.05;
   if (vector.length() > maxForce) {

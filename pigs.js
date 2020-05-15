@@ -31,11 +31,7 @@ var text = true;
 var w, h;
 var mouse = new Victor(10000, 10000);
 function resize() {
-  if (w > 992) {
-  document.removeEventListener("mousemove", function (e) {mouse = new Victor(e.clientX, e.clientY)});
-  } else {
-  document.addEventListener("mousemove", function (e) {mouse = new Victor(e.clientX, e.clientY)});
-  }
+  
   w = canvas.width = innerWidth;
   h = canvas.height = innerHeight;
   if (textX > w || textY > h) {
@@ -46,6 +42,9 @@ function resize() {
 resize();
 var textX = 0
 var textY = 0
+if (w > 992) {
+  document.addEventListener("mousemove", function (e) {mouse = new Victor(e.clientX, e.clientY)});
+  }
 newClickPosition()
 window.addEventListener("resize", resize);
 function rand(min, max) { return Math.random() * (max ? (max - min) : min) + (max ? min : 0) }

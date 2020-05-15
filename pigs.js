@@ -335,8 +335,8 @@ function newClickPosition() {
   nextY=rand(40, h-40)
   var radius = 450
   } else {
-    nextX=rand(20, w-20)
-    nextY=rand(20, h-40)
+    nextX=rand(60, w-60)
+    nextY=rand(60, h-60)
     var radius = 200
   }
   var el = document.getElementById("textmain");

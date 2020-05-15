@@ -31,6 +31,11 @@ var text = true;
 var w, h;
 var mouse = new Victor(10000, 10000);
 function resize() {
+  if (w > 992) {
+  document.removeEventListener("mousemove", function (e) {mouse = new Victor(e.clientX, e.clientY)});
+  } else {
+  document.addEventListener("mousemove", function (e) {mouse = new Victor(e.clientX, e.clientY)});
+  }
   w = canvas.width = innerWidth;
   h = canvas.height = innerHeight;
   if (textX > w || textY > h) {
@@ -215,7 +220,6 @@ requestAnimationFrame(update);
 function distance(x1, y1, x2, y2) {
   const xDist = x2 - x1
   const yDist = y2 - y1
-
   return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2))
 }
 function getMousePosition(event) {
@@ -234,11 +238,6 @@ document.addEventListener("mousedown", function (e) {
   }
 });
 
-if (w > 992) {
-document.addEventListener("mousemove", function (e) {
-  mouse = new Victor(e.clientX, e.clientY)
-});
-}
 function limitForce(vector) {
   var maxForce = 0.05;
   if (vector.length() > maxForce) {

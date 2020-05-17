@@ -80,7 +80,7 @@ function update() {
   if (text) {
     ctx.font = "20px Arial";
     ctx.fillStyle = "white";
-    ctx.drawImage(click, textX, textY, click.width/6, click.height/6);
+    ctx.drawImage(click, textX, textY, click.width/5, click.height/5);
   }
   if (image.complete) {
     var iw = image.width;
@@ -88,7 +88,7 @@ function update() {
     var i = 0
 
     if (clicked) {
-      ctx.drawImage(feed, clickedPos.x-click.width/12, clickedPos.y-click.height/12, click.width/6, click.height/6);
+      ctx.drawImage(feed, clickedPos.x-click.width/12, clickedPos.y-click.height/12, click.width/5, click.height/5);
       for (var i = 0; i < sprites.length; i++) {
         var spr = sprites[i];
         var desired = clickedPos.clone().subtract(spr.xPosition);

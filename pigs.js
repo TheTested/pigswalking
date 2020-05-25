@@ -333,12 +333,12 @@ function steer(current, desired) {
 function newClickPosition() {
   if(w > 992) {
   nextX=rand(250, w-120)
-  nextY=rand(60, h-60)
+  nextY=rand(100, h-100)
   var radius = 450
   } else {
-    nextX=rand(45, w-45)
+    nextX=rand(55, w-55)
     nextY=rand(60, h-55)
-    var radius = 100
+    var radius = 50
   }
   var el = document.getElementById("textmain");
   var rect = el.getBoundingClientRect();

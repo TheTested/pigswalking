@@ -338,7 +338,7 @@ function newClickPosition() {
   } else {
     nextX=rand(55, w-55)
     nextY=rand(60, h-55)
-    var radius = 50
+    var radius = 0
   }
   var el = document.getElementById("textmain");
   var rect = el.getBoundingClientRect();

@@ -340,7 +340,7 @@ function newClickPosition() {
     nextY=rand(10, h-10)
     var radius = 0
   }
-  var el = document.getElementById("textmain");
+  var el = document.getElementById("titlemain");
   var rect = el.getBoundingClientRect();
   if (distance(nextX, nextY, textX, textY) < radius) {
     console.log("close");

@@ -227,7 +227,7 @@ function getMousePosition(event) {
   let y = event.clientY - rect.top;
   if (distance(x, y, textX + 50, textY) < 50) {
     clicked = true
-    clickedPos = new Victor(x, y)
+    clickedPos = new Victor(textX, textY)
     text = false;
   }
 }
@@ -338,16 +338,14 @@ function newClickPosition() {
   } else {
     nextX=rand(50, w-50)
     nextY=rand(120, h-50)
-    var radius = 0
+    var radius = 50
   }
   var el = document.getElementById("titlemain");
   var rect = el.getBoundingClientRect();
   if (distance(nextX, nextY, textX, textY) < radius) {
-    console.log("close");
     newClickPosition()
   } else if (((nextY+50)>rect.top && (nextY-50)<rect.bottom) && ((nextX+50)>rect.left && (nextX-50)<rect.right)) {
     newClickPosition()
-    console.log("rec");
   } else {
     textX = nextX
     textY = nextY

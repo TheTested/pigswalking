@@ -345,7 +345,7 @@ function newClickPosition() {
   if (distance(nextX, nextY, textX, textY) < radius) {
     console.log("close");
     newClickPosition()
-  } else if ((nextY>rect.top && nextY<rect.bottom) && (nextX>rect.left && nextX<rect.right)) {
+  } else if (((nextY+50)>rect.top && (nextY-50)<rect.bottom) && ((nextX+50)>rect.left && (nextX-50)<rect.right)) {
     newClickPosition()
     console.log("rec");
   } else {

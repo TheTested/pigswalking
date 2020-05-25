@@ -343,9 +343,11 @@ function newClickPosition() {
   var el = document.getElementById("textmain");
   var rect = el.getBoundingClientRect();
   if (distance(nextX, nextY, textX, textY) < radius) {
+    console.log("close")
     newClickPosition()
   } else if ((nextY>rect.top && nextY<rect.bottom) || (nextX>rect.left && nextX<rect.right)) {
-    newClickPosition()
+    newClickPosition("rect")
+    console.log()
   } else {
     textX = nextX
     textY = nextY

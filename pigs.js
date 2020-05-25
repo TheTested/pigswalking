@@ -227,7 +227,7 @@ function getMousePosition(event) {
   let y = event.clientY - rect.top;
   if (distance(x, y, textX + 50, textY) < 50) {
     clicked = true
-    clickedPos = new Victor(textX, textY)
+    clickedPos = new Victor(textX+25, textY+25)
     text = false;
   }
 }

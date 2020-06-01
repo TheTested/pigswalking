@@ -1,5 +1,5 @@
 var image = new Image;
-image.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebb9b5db2b44c5b95a32f87_pig.png";
+image.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ed4d5bf97a20a614c937110_piggy_pink_pig.png";
 var feed = new Image;
 feed.src = "https://uploads-ssl.webflow.com/5ea2c6f295e67d090a35c87f/5ebbaa67da7f595aeba23cf6_feed1.png";
 var feed1 = new Image;

@@ -231,7 +231,7 @@ function getMousePosition(event) {
     text = false;
   }
 }
-document.addEventListener("mousedown", function (e) {
+document.addEventListener("click", function (e) {
   if (text) {
     getMousePosition(e);
   }

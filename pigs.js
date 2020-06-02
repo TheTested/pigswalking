@@ -50,7 +50,7 @@ window.addEventListener("resize", resize);
 function rand(min, max) { return Math.random() * (max ? (max - min) : min) + (max ? min : 0) }
 function DO(count, callback) { while (count--) { callback(count) } }
 const sprites = [];
-DO(8, () => {
+DO(5, () => {
   sprites.push({
     position: new Victor(rand(w), rand(h)),
     xPosition: new Victor(0, 0), // actual position of sprite

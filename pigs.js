@@ -342,9 +342,14 @@ function newClickPosition() {
   }
   var el = document.getElementById("titlemain");
   var rect = el.getBoundingClientRect();
+  
+  var el2 = document.getElementById("logopigs");
+  var rect2 = el.getBoundingClientRect();
   if (distance(nextX, nextY, textX, textY) < radius) {
     newClickPosition()
   } else if (((nextY+50)>rect.top && (nextY-50)<rect.bottom) && ((nextX+50)>rect.left && (nextX-50)<rect.right)) {
+    newClickPosition()
+  } else if (((nextY+50)>rect2.top && (nextY-50)<rect2.bottom) && ((nextX+50)>rect2.left && (nextX-50)<rect2.right)) {
     newClickPosition()
   } else {
     textX = nextX

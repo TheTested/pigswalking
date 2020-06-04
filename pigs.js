@@ -47,16 +47,18 @@ if (w > 992) {
   }
 newClickPosition()
 window.addEventListener("resize", resize);
+let sizes = [0.1, 0.15, 0.2, 0.25, 0.3]
 function rand(min, max) { return Math.random() * (max ? (max - min) : min) + (max ? min : 0) }
 function DO(count, callback) { while (count--) { callback(count) } }
 const sprites = [];
 DO(5, () => {
+  console.log(sizes[count]);
   sprites.push({
     position: new Victor(rand(w), rand(h)),
     xPosition: new Victor(0, 0), // actual position of sprite
     velocity: new Victor(rand(-2, 2), rand(-2, 2)),
     acceleration: new Victor(rand(-0.5, 0.5), rand(-0.5, 0.5)),
-    scale: rand(0.1, 0.3),
+    scale: sizes[count],
     dr: 0,
     r: 0,
     move: true,

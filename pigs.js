@@ -47,7 +47,7 @@ if (w > 992) {
   }
 newClickPosition()
 window.addEventListener("resize", resize);
-let sizes = [0.1, 0.15, 0.2, 0.25, 0.3]
+let sizes = [0.23, 0.27, 0.2, 0.25, 0.3]
 function rand(min, max) { return Math.random() * (max ? (max - min) : min) + (max ? min : 0) }
 function DO(count, callback) { while (count--) { callback(count) } }
 const sprites = [];

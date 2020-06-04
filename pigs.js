@@ -52,7 +52,6 @@ function rand(min, max) { return Math.random() * (max ? (max - min) : min) + (ma
 function DO(count, callback) { while (count--) { callback(count) } }
 const sprites = [];
 DO(5, (count) => {
-  console.log(sizes[count]);
   sprites.push({
     position: new Victor(rand(w), rand(h)),
     xPosition: new Victor(0, 0), // actual position of sprite
